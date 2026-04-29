@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="ESPRIM-IT — Solutions Digitales, Sécurisées et Durables. Développement web, cybersécurité, automatisation et coaching pour entreprises et particuliers." />
+  <meta name="keywords"
+    content="développement web, cybersécurité, automatisation, coaching numérique, solutions digitales, sécurité informatique" />
+  <meta property="og:title" content="ESPRIM-IT — Solutions Digitales · Sécurisées · Durables" />
+  <meta property="og:description"
+    content="Micro-entreprise spécialisée dans le développement de solutions digitales modernes, sécurisées et accessibles." />
+  <title>ESPRIM-IT — Solutions Digitales · Sécurisées · Durables</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="page-loader" aria-hidden="true">
+    <div class="loader-logo">ESPRIM-IT</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- 3D Background Canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu navigation">
+    <button class="mobile-close" id="mobile-close" aria-label="Fermer le menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+    <a href="#hero">Accueil</a>
+    <a href="#context">Contexte</a>
+    <a href="#mission">Mission</a>
+    <a href="#services">Services</a>
+    <a href="#valeur">Valeur Ajoutée</a>
+    <a href="#coaching">Coaching</a>
+    <a href="#modele">Modèle</a>
+    <a href="equipe.html">Notre Équipe</a>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="main-nav" role="navigation" aria-label="Navigation principale">
+    <a href="#hero" class="nav-logo" aria-label="ESPRIM-IT — Accueil">
+      <div class="nav-logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1a4fd6" />
+              <stop offset="100%" style="stop-color:#00d4ff" />
+            </linearGradient>
+          </defs>
+          <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" fill="none" stroke="url(#logo-grad)" stroke-width="2" />
+          <polygon points="20,10 30,16 30,24 20,30 10,24 10,16" fill="url(#logo-grad)" opacity="0.15" />
+          <circle cx="20" cy="20" r="4" fill="url(#logo-grad)" />
+        </svg>
+      </div>
+      <span class="nav-logo-text">ESPRIM<span>-IT</span></span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#context">Contexte</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#valeur">Valeur</a></li>
+      <li><a href="#coaching">Coaching</a></li>
+      <li><a href="#modele">Modèle</a></li>
+      <li><a href="equipe.html">Équipe</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 1 — HERO
+    ════════════════════════════════════════════ -->
+    <section id="hero" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div style="position: relative; z-index: 2; width: 100%;">
+        <div class="hero-badge reveal">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          Micro-entreprise · Solutions Digitales
+        </div>
+
+        <h1 class="hero-title reveal reveal-delay-1" id="hero-title">
+          <span class="brand">ESPRIM-IT</span>
+        </h1>
+
+        <div class="hero-subtitle-line reveal reveal-delay-2" aria-label="Solutions Digitales, Sécurisées, Durables">
+          Solutions Digitales
+          <span class="sep" aria-hidden="true"></span>
+          Sécurisées
+          <span class="sep" aria-hidden="true"></span>
+          Durables
+        </div>
+
+        <p class="hero-desc reveal reveal-delay-2">
+          Micro-entreprise spécialisée dans le développement de solutions digitales
+          modernes et accessibles — avec la sécurité comme valeur fondamentale.
+        </p>
+
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#services" class="btn-primary" id="hero-cta-services">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              aria-hidden="true">
+              <polyline points="13 17 18 12 13 7" />
+              <polyline points="6 17 11 12 6 7" />
+            </svg>
+            Découvrir nos services
+          </a>
+          <a href="#mission" class="btn-secondary" id="hero-cta-mission">
+            Notre mission
+          </a>
+        </div>
+
+        <div class="hero-stats reveal reveal-delay-4">
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="6">6</div>
+            <div class="hero-stat-label">Services</div>
+          </div>
+          <div class="hero-stat-sep" aria-hidden="true"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="3">3</div>
+            <div class="hero-stat-label">Cibles clients</div>
+          </div>
+          <div class="hero-stat-sep" aria-hidden="true"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">100%</div>
+            <div class="hero-stat-label">Security by Design</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 2 — CONTEXTE & OPPORTUNITÉ
+    ════════════════════════════════════════════ -->
+    <section id="context" aria-labelledby="context-title">
+      <div class="section-container">
+        <div class="section-label reveal">01 — Contexte</div>
+        <h2 class="section-title reveal reveal-delay-1" id="context-title">
+          Un marché réel,<br>des besoins <span class="accent">non couverts</span>
+        </h2>
+
+        <div class="context-grid">
+          <div class="reveal reveal-delay-1">
+            <p class="context-col-title problem">Ce qui manque aujourd'hui</p>
+            <ul class="context-list problem" role="list">
+              <li>
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </span>
+                Les agences web ignorent souvent la sécurité dans leurs projets
+              </li>
+              <li>
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </span>
+                Les freelances manquent souvent de vision globale et stratégique
+              </li>
+              <li>
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </span>
+                Les solutions clés en main sont coûteuses et rigides
+              </li>
+              <li>
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </span>
+                L'accompagnement post-livraison est quasi inexistant
+              </li>
+            </ul>
+          </div>
+
+          <div class="reveal reveal-delay-2">
+            <p class="context-col-title solution">La réponse ESPRIM-IT</p>
+            <ul class="context-list solution" role="list">
+              <li>
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                Sécurité intégrée dès la conception — Security by Design
+              </li>
+              <li>
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                Double expertise Dev + Cybersécurité en un seul interlocuteur
+              </li>
+              <li>
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                Solutions sur mesure adaptées à chaque budget
+              </li>
+              <li>
+                <span class="icon-wrap" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                Suivi actif, formation et montée en compétences du client
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 3 — MISSION & VISION
+    ════════════════════════════════════════════ -->
+    <section id="mission" aria-labelledby="mission-title">
+      <div class="section-container">
+        <div class="section-label reveal">02 — Mission &amp; Vision</div>
+        <h2 class="section-title reveal reveal-delay-1" id="mission-title">
+          <span class="accent">Accompagner.</span><br>Protéger. Faire évoluer.
+        </h2>
+
+        <div class="mission-layout">
+          <article class="mission-card reveal reveal-delay-1">
+            <div class="card-corner" aria-hidden="true"></div>
+            <p class="mission-card-label">Notre Mission</p>
+            <h3 class="mission-card-title">Une approche<br>responsable</h3>
+            <p>Accompagner entreprises et particuliers dans la création, l'automatisation, la modernisation et la
+              protection de leurs outils numériques — avec une approche responsable et durable.</p>
+          </article>
+
+          <article class="mission-card reveal reveal-delay-2">
+            <div class="card-corner" aria-hidden="true"></div>
+            <p class="mission-card-label">Notre Vision</p>
+            <h3 class="mission-card-title">La sécurité<br>pour tous</h3>
+            <p>Devenir une référence dans le développement digital en proposant des solutions de qualité professionnelle
+              accessibles à tous, intégrant la sécurité comme valeur fondamentale.</p>
+          </article>
+        </div>
+
+        <div class="values-row reveal reveal-delay-3" role="list" aria-label="Nos valeurs fondamentales">
+          <div class="value-item" role="listitem">
+            <p class="value-item-name">Qualité</p>
+          </div>
+          <div class="value-item" role="listitem">
+            <p class="value-item-name">Sécurité</p>
+          </div>
+          <div class="value-item" role="listitem">
+            <p class="value-item-name">Proximité</p>
+          </div>
+          <div class="value-item" role="listitem">
+            <p class="value-item-name">Croissance</p>
+          </div>
+          <div class="value-item" role="listitem">
+            <p class="value-item-name">Confiance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 4 — NOS SERVICES
+    ════════════════════════════════════════════ -->
+    <section id="services" aria-labelledby="services-title">
+      <div class="section-container">
+        <div class="section-label reveal">03 — Nos Services</div>
+        <h2 class="section-title reveal reveal-delay-1" id="services-title">
+          Six expertises,<br>une seule <span class="accent">vision</span>
+        </h2>
+        <p class="section-desc reveal reveal-delay-2">
+          De la conception au déploiement, en passant par la sécurisation et la formation — nous couvrons l'intégralité
+          du spectre digital.
+        </p>
+
+        <div class="services-grid" role="list">
+
+          <article class="service-card reveal reveal-delay-1" role="listitem">
+            <span class="service-card-number" aria-hidden="true">01</span>
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18" />
+                <path d="M9 21V9" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Développement</h3>
+            <p class="service-card-desc">Sites web, applications mobiles et logiciels sur mesure adaptés à vos besoins
+              spécifiques.</p>
+            <div class="service-card-bar" aria-hidden="true"></div>
+          </article>
+
+          <article class="service-card reveal reveal-delay-2" role="listitem">
+            <span class="service-card-number" aria-hidden="true">02</span>
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Modernisation</h3>
+            <p class="service-card-desc">Migration et mise à jour des systèmes existants pour les adapter aux standards
+              actuels.</p>
+            <div class="service-card-bar" aria-hidden="true"></div>
+          </article>
+
+          <article class="service-card reveal reveal-delay-3" role="listitem">
+            <span class="service-card-number" aria-hidden="true">03</span>
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Cybersécurité</h3>
+            <p class="service-card-desc">Audit de sécurité, renforcement des systèmes et mise en conformité
+              réglementaire.</p>
+            <div class="service-card-bar" aria-hidden="true"></div>
+          </article>
+
+          <article class="service-card reveal reveal-delay-1" role="listitem">
+            <span class="service-card-number" aria-hidden="true">04</span>
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Automatisation</h3>
+            <p class="service-card-desc">Automatisation intelligente des processus métier pour gagner en efficacité et
+              en productivité.</p>
+            <div class="service-card-bar" aria-hidden="true"></div>
+          </article>
+
+          <article class="service-card reveal reveal-delay-2" role="listitem">
+            <span class="service-card-number" aria-hidden="true">05</span>
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Sécurité Commerce</h3>
+            <p class="service-card-desc">Systèmes de sécurité physique et numérique adaptés aux commerces et points de
+              vente.</p>
+            <div class="service-card-bar" aria-hidden="true"></div>
+          </article>
+
+          <article class="service-card reveal reveal-delay-3" role="listitem">
+            <span class="service-card-number" aria-hidden="true">06</span>
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 class="service-card-title">Coaching &amp; Formation</h3>
+            <p class="service-card-desc">Accompagnement personnalisé pour entrepreneurs, particuliers et étudiants en
+              IT.</p>
+            <div class="service-card-bar" aria-hidden="true"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 5 — VALEUR AJOUTÉE
+    ════════════════════════════════════════════ -->
+    <section id="valeur" aria-labelledby="valeur-title">
+      <div class="section-container">
+        <div class="section-label reveal">04 — Valeur Ajoutée</div>
+        <h2 class="section-title reveal reveal-delay-1" id="valeur-title">
+          Pourquoi choisir<br><span class="accent">ESPRIM-IT</span>&nbsp;?
+        </h2>
+
+        <div class="comparison-table reveal reveal-delay-2" role="table"
+          aria-label="Comparaison ESPRIM-IT vs concurrents">
+          <div class="comparison-header" role="row">
+            <div class="comparison-header-cell" role="columnheader">Ce que font les autres</div>
+            <div class="comparison-header-cell" role="columnheader">ESPRIM-IT</div>
+            <div class="comparison-header-cell" role="columnheader">Ce que vous gagnez</div>
+          </div>
+
+          <div class="comparison-row" role="row">
+            <div class="comparison-cell" role="cell">Livrent le projet, puis disparaissent</div>
+            <div class="comparison-cell" role="cell">Suivi actif après livraison</div>
+            <div class="comparison-cell" role="cell">Évolution sans repartir de zéro</div>
+          </div>
+          <div class="comparison-row" role="row">
+            <div class="comparison-cell" role="cell">Dev OU sécurité, rarement les deux</div>
+            <div class="comparison-cell" role="cell">Dev ET cybersécurité intégrée</div>
+            <div class="comparison-cell" role="cell">Un seul interlocuteur, zéro angle mort</div>
+          </div>
+          <div class="comparison-row" role="row">
+            <div class="comparison-cell" role="cell">Tarifs inaccessibles aux petits budgets</div>
+            <div class="comparison-cell" role="cell">Offres modulables et accessibles</div>
+            <div class="comparison-cell" role="cell">Solutions pros à prix justes</div>
+          </div>
+          <div class="comparison-row" role="row">
+            <div class="comparison-cell" role="cell">Peu ou pas de formation client</div>
+            <div class="comparison-cell" role="cell">Coaching inclus dans l'accompagnement</div>
+            <div class="comparison-cell" role="cell">Autonomie et montée en compétences</div>
+          </div>
+          <div class="comparison-row" role="row">
+            <div class="comparison-cell" role="cell">La sécurité ajoutée en dernier</div>
+            <div class="comparison-cell" role="cell">Security by Design dès le départ</div>
+            <div class="comparison-cell" role="cell">Système robuste dès le premier jour</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 6 — COACHING & ACCOMPAGNEMENT
+    ════════════════════════════════════════════ -->
+    <section id="coaching" aria-labelledby="coaching-title">
+      <div class="section-container">
+        <div class="section-label reveal">05 — Accompagnement</div>
+        <h2 class="section-title reveal reveal-delay-1" id="coaching-title">
+          De l'idée aux<br>premières <span class="accent">réussites</span>
+        </h2>
+        <p class="section-desc reveal reveal-delay-2">
+          ESPRIM-IT accompagne ses clients de A à Z — entrepreneurs, particuliers ou étudiants, nous avons une approche
+          dédiée pour chacun.
+        </p>
+
+        <div class="coaching-grid">
+
+          <article class="coaching-card reveal reveal-delay-1">
+            <span class="coaching-card-tag">Entrepreneurs</span>
+            <h3 class="coaching-card-title">Lancer &amp; Développer</h3>
+            <ul class="coaching-list" role="list">
+              <li>Création de la présence digitale</li>
+              <li>Conseil stratégique et aide au lancement</li>
+              <li>Accompagnement jusqu'aux premières ventes</li>
+              <li>Site web, outils de gestion, automatisation</li>
+            </ul>
+          </article>
+
+          <article class="coaching-card reveal reveal-delay-2">
+            <span class="coaching-card-tag">Particuliers</span>
+            <h3 class="coaching-card-title">Protéger &amp; Évoluer</h3>
+            <ul class="coaching-list" role="list">
+              <li>Initiation à la cybersécurité</li>
+              <li>Bonnes pratiques du quotidien numérique</li>
+              <li>Protection des données personnelles</li>
+              <li>Sensibilisation aux menaces en ligne</li>
+            </ul>
+          </article>
+
+          <article class="coaching-card reveal reveal-delay-3">
+            <span class="coaching-card-tag">Étudiants</span>
+            <h3 class="coaching-card-title">Former &amp; Insérer</h3>
+            <ul class="coaching-list" role="list">
+              <li>Préparation aux certifications IT</li>
+              <li>Coaching personnalisé et suivi régulier</li>
+              <li>Supports de formation adaptés</li>
+              <li>Accompagnement pour l'insertion professionnelle</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 7 — MODÈLE ÉCONOMIQUE
+    ════════════════════════════════════════════ -->
+    <section id="modele" aria-labelledby="modele-title">
+      <div class="section-container">
+        <div class="section-label reveal">06 — Modèle Économique</div>
+        <h2 class="section-title reveal reveal-delay-1" id="modele-title">
+          Un modèle <span class="accent">évolutif</span><br>et structuré
+        </h2>
+
+        <div class="modele-layout">
+
+          <div>
+            <p style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white-40); margin-bottom: 24px;"
+              class="reveal">Sources de revenus</p>
+            <div class="revenue-cards reveal reveal-delay-1">
+              <div class="revenue-card">
+                <p class="revenue-card-title">Projets sur mesure</p>
+                <p class="revenue-card-desc">Tarification par projet — forfait fixe ou régie selon la complexité</p>
+              </div>
+              <div class="revenue-card">
+                <p class="revenue-card-title">Abonnements</p>
+                <p class="revenue-card-desc">Support mensuel, maintenance et mises à jour continues</p>
+              </div>
+              <div class="revenue-card">
+                <p class="revenue-card-title">Formations</p>
+                <p class="revenue-card-desc">Sessions coaching et préparation aux certifications IT</p>
+              </div>
+              <div class="revenue-card">
+                <p class="revenue-card-title">Audit Sécurité</p>
+                <p class="revenue-card-desc">Rapports d'audit complets et recommandations personnalisées</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white-40); margin-bottom: 24px;"
+              class="reveal">Feuille de route</p>
+            <div class="roadmap reveal reveal-delay-1">
+
+              <div class="roadmap-item">
+                <div class="roadmap-line-wrap" aria-hidden="true">
+                  <div class="roadmap-dot">P1</div>
+                  <div class="roadmap-connector"></div>
+                </div>
+                <div class="roadmap-content">
+                  <p class="roadmap-phase-label">Phase 1 — En cours</p>
+                  <p class="roadmap-phase-title">Lancement</p>
+                  <p class="roadmap-phase-desc">Constitution de l'entreprise, acquisition des premiers clients,
+                    développement du réseau local.</p>
+                </div>
+              </div>
+
+              <div class="roadmap-item">
+                <div class="roadmap-line-wrap" aria-hidden="true">
+                  <div class="roadmap-dot">P2</div>
+                  <div class="roadmap-connector"></div>
+                </div>
+                <div class="roadmap-content">
+                  <p class="roadmap-phase-label">Phase 2 — À venir</p>
+                  <p class="roadmap-phase-title">Développement</p>
+                  <p class="roadmap-phase-desc">Élargissement de l'équipe, partenariats stratégiques, constitution d'un
+                    portfolio de référence.</p>
+                </div>
+              </div>
+
+              <div class="roadmap-item">
+                <div class="roadmap-line-wrap" aria-hidden="true">
+                  <div class="roadmap-dot">P3</div>
+                  <div class="roadmap-connector"></div>
+                </div>
+                <div class="roadmap-content">
+                  <p class="roadmap-phase-label">Phase 3 — Vision</p>
+                  <p class="roadmap-phase-title">Expansion</p>
+                  <p class="roadmap-phase-desc">Marchés élargis, offres certifiées et centre de formation numérique.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer id="contact" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="ESPRIM-IT">
+          <div class="nav-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="logo-grad-f" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#1a4fd6" />
+                  <stop offset="100%" style="stop-color:#00d4ff" />
+                </linearGradient>
+              </defs>
+              <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" fill="none" stroke="url(#logo-grad-f)"
+                stroke-width="2" />
+              <circle cx="20" cy="20" r="4" fill="url(#logo-grad-f)" />
+            </svg>
+          </div>
+          <span class="nav-logo-text">ESPRIM<span>-IT</span></span>
+        </a>
+        <p>Solutions digitales modernes, sécurisées et durables. Votre partenaire de confiance pour la transformation
+          numérique.</p>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#context">Contexte</a></li>
+          <li><a href="#mission">Mission &amp; Vision</a></li>
+          <li><a href="#services">Nos Services</a></li>
+          <li><a href="#valeur">Valeur Ajoutée</a></li>
+          <li><a href="#coaching">Coaching</a></li>
+          <li><a href="#modele">Modèle Économique</a></li>
+          <li><a href="equipe.html">Notre Équipe</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#services">Développement Web</a></li>
+          <li><a href="#services">Cybersécurité</a></li>
+          <li><a href="#services">Automatisation</a></li>
+          <li><a href="#services">Sécurité Commerce</a></li>
+          <li><a href="#coaching">Coaching &amp; Formation</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 ESPRIM-IT. Tous droits réservés.</p>
+      <p class="footer-tagline">
+        Conçu avec <span>Security by Design</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <!-- Main JS -->
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+
+</html>
